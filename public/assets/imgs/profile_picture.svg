@@ -1,0 +1,26 @@
+<svg
+  width="768"
+  height="768"
+  viewBox="0 0 768 768"
+  fill="none"
+  xmlns="http://www.w3.org/2000/svg"
+>
+  <!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc. | !Icon got from "https://fontawesome.com/icons/user?f=classic&s=solid" | Some edits made on top of it-->
+  <circle cx="384" cy="384" r="384" fill="#484848" />
+  <g clip-path="url(#clip0_1211_26)">
+    <path
+      d="M384 384C417.948 384 450.505 370.514 474.51 346.51C498.514 322.505 512 289.948 512 256C512 222.052 498.514 189.495 474.51 165.49C450.505 141.486 417.948 128 384 128C350.052 128 317.495 141.486 293.49 165.49C269.486 189.495 256 222.052 256 256C256 289.948 269.486 322.505 293.49 346.51C317.495 370.514 350.052 384 384 384ZM338.3 432C239.8 432 160 511.8 160 610.3C160 626.7 173.3 640 189.7 640H578.3C594.7 640 608 626.7 608 610.3C608 511.8 528.2 432 429.7 432H338.3Z"
+      fill="#DBDBDB"
+    />
+  </g>
+  <defs>
+    <clipPath id="clip0_1211_26">
+      <rect
+        width="448"
+        height="512"
+        fill="white"
+        transform="translate(160 128)"
+      />
+    </clipPath>
+  </defs>
+</svg>
