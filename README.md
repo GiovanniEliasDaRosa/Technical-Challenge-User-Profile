@@ -1,83 +1,139 @@
-# Technical-Challenge-User-Profile
+# Technical Challenge User Profile
 
-## How it was made
+[![en](https://img.shields.io/badge/lang-en-red.svg)](/README.md)
+[![pt-br](https://img.shields.io/badge/lang-pt--br-green.svg)](/README.pt-br.md)
 
-This was made with Laravel and with a Laravel Mix([laravel-mix.com](https://laravel-mix.com/)) Node Module, which provides a clean, fluent API for defining basic webpack build steps for your applications. With support for several common CSS and JS pre-processors.
+## Table of Contents
 
-This project uses the database as MySQL, to run it, you should have some kind of MySQL server, I recommend XAMPP for Windows, which is a pretty easy to install and run.
+1. [Overview](#overview)
+2. [Technologies Used](#technologies-used)
+3. [Prerequisites](#prerequisites)
+4. [Installation Steps](#installation-steps)
+5. [Troubleshooting](#troubleshooting)
 
-## How to run
+## Overview
 
-### 1. Verify you have PHP installed on the computer
+This project was built with Laravel and focuses on registering users and showing other users.
 
-An easy way to do that is by installing XAMPP, and it comes with MySQL, which will be used in this project
+## Technologies Used
 
-### 2. Verify you have MYSQL installed on the computer
+- **Laravel**: PHP framework for building web applications.
+- **MySQL**: relational database management system.
+- **Laravel Mix**: a compiler assets using Webpack. [Learn more](https://laravel-mix.com/).
 
-An easy way to do that is by installing XAMPP, it comes with MySQL and PHP.
+## Prerequisites
 
-### 3. Start the XAMPP server
+Before running the application, you need to install the following:
 
-After installing and running the XAMPP app proceed
+- **XAMPP**: Includes PHP and MySQL. You can use other applications if you prefer, but you need PHP and MySQL.
+- **Composer**: A dependency manager for PHP
+- **npm**: Required for managing JavaScript packages.
+- **laravel-mix**: Required to compile CSS and JavaScript assets.
 
-On the POPUP click on the line `MySQL` click the 'Start' button
+## Installation Steps
 
-(Optional) You can also start Apache to visualize the database in the browser by accessing `127.0.0.1/phpmyadmin`
+### 1. Install XAMPP
 
-### 4. Install the Laravel Application
+Download and install PHP and MySQL with [XAMPP](https://www.apachefriends.org/index.html).
 
-Start a terminal and run this
+### 2. Start the XAMPP Server
+
+- Open the XAMPP Control Panel.
+- Click the 'Start' button next to **MySQL**.
+- (Optional) Start **Apache** to access phpMyAdmin at `http://127.0.0.1/phpmyadmin`.
+  > This is optional, and allows you to view your database through phpMyAdmin. You can also use other database tools like TablePlus, HeidiSQL and others.
+
+### 3. Download this Repository
+
+Download this repository by clicking the `<> Code` button and selecting `Download ZIP`.
+
+### 4. Install Laravel Dependencies
+
+Navigate to the project root directory in your terminal and run:
 
 ```bash
-composer intall
+composer install
 ```
 
-### 5. Install the node package
+### 5. Install Node Packages
 
-Still on the terminal run this
+In the same terminal, run:
 
 ```bash
 npm install
 ```
 
-### 6. Copy the .env.example
+### 6. Configure Environment Variables
 
-On the root folder of project duplicate the `.env.example` and rename to `.env`
-
-### 7. Create the database
-
-Still on the terminal run this
+Duplicate the `.env.example` file and rename it to `.env`:
 
 ```bash
-php artisan migrate
+cp .env.example .env
 ```
 
-### 8. Create the Application key
+### 7. Create the Database
 
-You need to run this, otherwise the Laravel will not work.
+Run the following command to create the database, generate the tables, and populate them with data.
+
+```bash
+php artisan migrate --seed
+```
+
+### 8. Generate Application Key
 
 ```bash
 php artisan key:generate
 ```
 
-### 8. Compile CSS and JS
+### 9. Link Storage
 
-This will compile the CSS and JS, you only need to run this once.
+Link the storage to make image uploads accessible
 
 ```bash
-npm run prod
+php artisan storage:link
 ```
 
-If you want to modify the project, running `npm run hot` will update the CSS and JS, and you need to keep the terminal open. Then on saving a file, it will automatically update the files under public/resource folder
+### 10. Compile Assets
 
-### 9. Create the server
+Compile the CSS and JS files
 
-This will create the local server, which can be accessed by typing `127.0.0.1:8000` in the URL, or clicking the link the command returns.
+```bash
+npm run production
+```
+
+For development, use:
+
+```bash
+npm run hot
+```
+
+### 11. Start the Local Server
+
+Run the following command to start the local server:
 
 ```bash
 php artisan serve
 ```
 
-**LEAVE THE TERMINAL OPEN** - While the terminal is open the serve is online, in case of closing it the serve will be shut down.
+Access the application at `http://127.0.0.1:8000`.
 
-**In a case of closing it accidentally** - You **only need to run the command from this step**
+**Note**: Keep the terminal open while the server is running. If you close it, the server will shut down.
+**If you close the terminal**, run this step again and ensure that XAMPP is still running.
+
+#### Host and Port Options
+
+- `--host[=HOST]` => Defines the **host** address where the application will run (default: `127.0.0.1`).
+- `--port[=PORT]` => Defines the **port** where the application will run (default: `8000`).
+
+For example, to execute the server in a different host or port:
+
+```bash
+php artisan serve --host=127.0.0.1 --port=8000
+```
+
+This way, your application will be accessible at http://127.0.0.1:8800.
+
+## Troubleshooting
+
+- If you encounter issues, ensure that the XAMPP services are running.
+- Check for any error messages in the terminal.
