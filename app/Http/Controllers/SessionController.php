@@ -30,7 +30,7 @@ class SessionController extends Controller
 
     request()->session()->regenerate();
 
-    return redirect('/')->with('notification', 'Bem vindo!');
+    return redirect('/')->with('notification', 'Bem vindo de volta!');
   }
 
   public function destroy()

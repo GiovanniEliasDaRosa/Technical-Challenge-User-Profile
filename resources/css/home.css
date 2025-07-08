@@ -1,0 +1,39 @@
+.home_login_to_see,
+.home_no_users {
+  padding: 0.5em;
+  border: dashed 0.25em hsl(201, 33%, 83%);
+  background-color: hsl(200, 35%, 90%);
+  border-radius: 0.5em;
+  text-align: center;
+}
+
+.home_users {
+  display: grid;
+  gap: 1em;
+}
+
+.home_user {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-template-rows: auto auto;
+  grid-template-areas: "photo name" "photo bio";
+  gap: 1em;
+  padding: 0.5em;
+  border-radius: 0.5em;
+  border: solid 0.25em hsl(201, 33%, 92%);
+  /* background-color: hsl(201, 33%, 92%); */
+  box-shadow: 0 0.125em 0.25em 0 hsla(0, 0%, 0%, 0.2);
+}
+
+.home_user_photo {
+  grid-area: photo;
+  border-radius: 50%;
+}
+
+.home_user_name {
+  grid-area: name;
+}
+
+.home_user_bio {
+  grid-area: bio;
+}

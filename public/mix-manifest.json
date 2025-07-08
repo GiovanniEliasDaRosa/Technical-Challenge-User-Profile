@@ -1,4 +1,8 @@
 {
-    "/resources/js/app.js": "/resources/js/app.js",
-    "/resources/css/app.css": "/resources/css/app.css"
+    "/resources/js/auth.js": "/resources/js/auth.js",
+    "/resources/css/home.css": "/resources/css/home.css",
+    "/resources/css/listusers.css": "/resources/css/listusers.css",
+    "/resources/css/auth.css": "/resources/css/auth.css",
+    "/resources/js/main.js": "/resources/js/main.js",
+    "/resources/css/global.css": "/resources/css/global.css"
 }

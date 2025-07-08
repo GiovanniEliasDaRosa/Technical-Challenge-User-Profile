@@ -76,11 +76,11 @@ class RegisteredUserController extends Controller
 
     $cepDatabase = Cep::where(
       [
-        ['value', $cep],
-        ['street_id', $state->id],
-        ['neighborhood_id', $city->id],
-        ['city_id', $neighborhood->id],
-        ['state_id', $street->id],
+        'value' => $cep,
+        "street_id" => $street->id,
+        "neighborhood_id" => $neighborhood->id,
+        "city_id" => $city->id,
+        "state_id" => $state->id
       ]
     )->first();
 
@@ -101,7 +101,7 @@ class RegisteredUserController extends Controller
     $user = User::create($attributes);
     Auth::login($user);
 
-    return redirect('/')->with('notification', 'Bem vindo!');
+    return redirect('/')->with('notification', 'Seja bem vindo!');
   }
 
   public function index()
@@ -251,6 +251,6 @@ class RegisteredUserController extends Controller
     }
     $user->save();
 
-    return redirect('/profile')->with('status', 'Informações atualizadas');
+    return redirect('/profile')->with('notification', 'Informações atualizadas!');
   }
 }

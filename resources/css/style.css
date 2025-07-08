@@ -1,0 +1,230 @@
+@font-face {
+  font-family: "NotoSans";
+  src: url("/assets/fonts/noto-sans-variable-font.ttf");
+  font-family: "Noto Sans", sans-serif;
+  font-optical-sizing: auto;
+  /* font-weight: 0; */
+  font-style: normal;
+  font-variation-settings: "wdth" 100;
+}
+
+/*
+  *@link https://utopia.fyi/type/calculator?c=600,16,1.125,1200,18,1.15,6,1,&s=0.75|0.5|0.25,1.5|2|3|4|6,s-l&g=s,l,xl,12
+  *Fluid type scale calculator -> Creates the font sizes that look awesome on all devices
+*/
+
+:root {
+  --step--1: clamp(0.8889rem, 0.7995rem + 0.2383vw, 0.9783rem);
+  --step-0: clamp(1rem, 0.875rem + 0.3333vw, 1.125rem);
+  --step-1: clamp(1.125rem, 0.9563rem + 0.45vw, 1.2938rem);
+  --step-2: clamp(1.2656rem, 1.0434rem + 0.5925vw, 1.4878rem);
+  --step-3: clamp(1.4238rem, 1.1367rem + 0.7657vw, 1.711rem);
+  --step-4: clamp(1.6018rem, 1.236rem + 0.9755vw, 1.9676rem);
+  --step-5: clamp(1.802rem, 1.3413rem + 1.2287vw, 2.2628rem);
+  --step-6: clamp(2.0273rem, 1.4524rem + 1.5331vw, 2.6022rem);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: hsl(200, 2%, 5%);
+  font-family: NotoSans, system-ui, "Segoe UI", Roboto, "Open Sans", sans-serif;
+}
+
+p,
+span,
+button,
+input,
+select,
+textarea {
+  font-size: var(--step-0);
+  font-family: NotoSans, system-ui, "Segoe UI", Roboto, "Open Sans", sans-serif;
+}
+
+body {
+  margin: 1em;
+  background-color: hsl(200, 25%, 95%);
+}
+
+:focus-visible {
+  box-shadow: 0 0 0 0.25em hsl(0, 0%, 100%);
+  outline: dashed 0.125em hsl(0, 0%, 0%);
+  outline-offset: 0.25em;
+}
+
+/* style the font-size correctly */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.5em;
+}
+
+h1 {
+  font-size: var(--step-6);
+}
+h2 {
+  font-size: var(--step-5);
+}
+h3 {
+  font-size: var(--step-4);
+}
+h4 {
+  font-size: var(--step-3);
+}
+h5 {
+  font-size: var(--step-2);
+}
+h6 {
+  font-size: var(--step-1);
+}
+
+img {
+  display: inline-block;
+  width: 4em;
+  height: 4em;
+  object-fit: cover;
+}
+
+a {
+  display: inline-block;
+}
+
+/* general layout */
+main {
+  padding: 1em;
+}
+
+main,
+header {
+  margin-inline: auto;
+  width: clamp(min(100%, 75em), 75em, 100%);
+  padding-inline: 1em;
+}
+
+header {
+  width: clamp(min(100%, 78em), 78em, 100%);
+}
+
+.divide_body {
+  min-height: calc(100vh - 2em);
+  min-height: calc(100svh - 2em);
+
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: auto 1fr;
+  justify-content: center;
+  align-items: center;
+}
+
+body:not(.divide_body) {
+  margin-bottom: 50vh;
+  margin-bottom: 50svh;
+}
+
+/* buttons */
+:is(button, .button) {
+  padding: 0.5em 0.75em;
+  border-radius: 0.5em;
+  background-color: hsl(200, 65%, 86%);
+  border: solid 0.125em hsl(200, 76%, 75%);
+  cursor: pointer;
+  text-decoration: none;
+}
+
+:is(button, .button).square {
+  padding: 0.5em;
+  width: 3em;
+  height: 3em;
+}
+
+:is(button, .button):is(.square, .center) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:is(button, .button):is(:focus-visible, :hover) {
+  background-color: hsl(200, 65%, 80%);
+  border-color: hsl(200, 58%, 63%);
+}
+
+:is(button, .button):active {
+  background-color: hsl(200, 83%, 64%);
+  border-color: hsl(200, 68%, 44%);
+}
+
+/* inputs */
+textarea {
+  resize: vertical;
+}
+
+input,
+textarea {
+  padding: 0.5em 0.75em;
+  border-radius: 0.5em;
+  background-color: hsl(200, 43%, 80%);
+  border: solid 0.125em hsl(200, 73%, 85%);
+  max-width: 100%;
+  min-width: 0;
+}
+
+:is(input, textarea):has(+ .form_error) {
+  background-color: hsl(0, 43%, 80%);
+  border-color: hsl(0, 99%, 74%);
+}
+
+:is(input, textarea):focus-visible {
+  background-color: hsl(201, 54%, 85%);
+  border-color: hsl(200, 50%, 72%);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  appearance: none;
+  padding: 0em;
+  width: 2em;
+  height: 2em;
+  background-color: transparent;
+  border: solid 0.125em hsl(200, 73%, 85%);
+}
+
+input[type="radio"] {
+  border-radius: 50%;
+}
+
+input[type="checkbox"] {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+:is(input[type="checkbox"], input[type="radio"]):checked {
+  background-color: hsl(106, 58%, 69%);
+  border: solid 0.125em hsl(106, 43%, 45%);
+}
+
+input[type="checkbox"]::before {
+  pointer-events: none;
+  opacity: 0;
+  scale: 2;
+  transition: opacity 0.25s ease-out, scale 0.25s ease-out;
+}
+
+input[type="checkbox"]:checked::before {
+  opacity: 1;
+  scale: 1;
+}
+
+[disabled="disabled"],
+[disabled="true"] {
+  background-color: hsl(202, 16%, 73%);
+  border-color: hsl(204, 12%, 54%);
+  color: hsl(0, 0%, 25%);
+  cursor: not-allowed;
+}
+
+/* home */

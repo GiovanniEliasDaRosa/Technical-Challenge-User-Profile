@@ -1,0 +1,74 @@
+@font-face {
+  font-family: "FontAwesome900";
+  src: url("/assets/icons/fa-solid-900.ttf") format("truetype");
+  font-weight: 900;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "FontAwesome400";
+  src: url("/assets/icons/fa-regular-400.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+.icons::before {
+  display: inline-block;
+  font-family: "FontAwesome900";
+  font-weight: 900;
+  font-style: normal;
+  font-variant: normal;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  margin-right: 0.5rem;
+}
+
+.icons.nomargin::before {
+  margin-right: 0;
+}
+
+.icons.small::before {
+  font-size: 0.5em;
+}
+
+.icons.exit::before {
+  content: "\f2f5";
+}
+
+.icons.star::before {
+  vertical-align: text-top;
+  content: "\f621";
+}
+
+.icons.star::before {
+  vertical-align: text-top;
+  content: "\f621";
+}
+
+.icons.file_upload::before {
+  content: "\f574";
+}
+
+.icons.left::before {
+  content: "\f104";
+}
+
+.icons.edit::before {
+  content: "\f044";
+}
+
+.icons.information::before {
+  content: "\f2bb";
+}
+
+.icons.place::before {
+  content: "\f3c5";
+}
+
+.icons.check::before {
+  content: "\f00c";
+}
+
+.icons.xmark::before {
+  content: "\f00d";
+}
