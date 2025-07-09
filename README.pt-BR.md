@@ -65,11 +65,7 @@ npm install
 
 ### 6. Configurar variáveis de ambiente
 
-Duplique o arquivo `.env.example` e renomeie para `.env`:
-
-```bash
-cp .env.example .env
-```
+Duplique o arquivo `.env.example` e renomeie para `.env`
 
 ### 7. Crie o Banco de Dados
 

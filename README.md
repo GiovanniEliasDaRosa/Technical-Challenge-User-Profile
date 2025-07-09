@@ -65,11 +65,7 @@ npm install
 
 ### 6. Configure Environment Variables
 
-Duplicate the `.env.example` file and rename it to `.env`:
-
-```bash
-cp .env.example .env
-```
+Duplicate the `.env.example` file and rename it to `.env`
 
 ### 7. Create the Database
 
