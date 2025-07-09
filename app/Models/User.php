@@ -24,7 +24,7 @@ class User extends Authenticatable
     'password',
     'picture',
     'birth_date',
-    'bibliography',
+    'biography',
     'cep_id',
     'address_complement',
     'address_number'

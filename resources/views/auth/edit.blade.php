@@ -19,7 +19,7 @@
       data-group="form_group_delete_file" />
 
     <x-form-group name-input="Data de nascimento" name="birth_date" type="date" :value="old('birth_date') ?? $birth_date" required />
-    <x-form-group name-input="Bibliografia" name="bibliography" type="textarea" :value="old('bibliography') ?? $bibliography" required />
+    <x-form-group name-input="Bibliografia" name="biography" type="textarea" :value="old('biography') ?? $biography" required />
 
     <h2>Endereço</h2>
     <x-form-group-divide>

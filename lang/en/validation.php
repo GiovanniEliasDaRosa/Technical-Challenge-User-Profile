@@ -199,7 +199,7 @@ return [
     'password' => 'password',
     'picture' => 'picture',
     'birth_date' => 'birth date',
-    'bibliography' => 'bibliography',
+    'biography' => 'biography',
     'address_street' => 'street name',
     'address_neighborhood' => 'neighborhood',
     'address_state' => 'state'

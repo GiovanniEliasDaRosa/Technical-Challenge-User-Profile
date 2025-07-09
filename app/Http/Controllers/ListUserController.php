@@ -19,7 +19,7 @@ class ListUserController extends Controller
       ]);
     }
 
-    $listUsers = User::select('name', 'picture', 'bibliography')->where('id', '!=', $authUser->id)->paginate(50);
+    $listUsers = User::select('name', 'picture', 'biography')->where('id', '!=', $authUser->id)->paginate(50);
     $listUsers->getCollection()->transform(function ($user) {
       $user->picture = $user->picture ? "/storage/" . $user->picture : "/assets/imgs/profile_picture.svg";
       return $user;

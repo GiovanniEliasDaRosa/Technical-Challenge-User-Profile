@@ -10,7 +10,7 @@
         <div class="home_user">
           <img class="home_user_photo" src="{{ $list_user->picture }}" alt="">
           <p class="home_user_name">{{ $list_user->name }}</p>
-          <p class="home_user_bio">{{ $list_user->bibliography }}</p>
+          <p class="home_user_bio">{{ $list_user->biography }}</p>
         </div>
       @empty
         <p class="home_no_users">Não há outros usuários cadastrados</p>

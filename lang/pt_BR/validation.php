@@ -151,7 +151,7 @@ return [
     'password' => 'senha',
     'picture' => 'foto',
     'birth_date' => 'data de nascimento',
-    'bibliography' => 'bibliografia',
+    'biography' => 'bibliografia',
     'address_street' => 'Rua',
     'address_neighborhood' => 'Bairro',
     'address_state' => 'Estado',

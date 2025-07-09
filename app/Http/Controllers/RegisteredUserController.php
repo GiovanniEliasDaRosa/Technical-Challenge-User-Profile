@@ -34,7 +34,7 @@ class RegisteredUserController extends Controller
       "password" => ['required', 'confirmed', Password::min(3)],
       "picture" => ['file', File::types(['png', 'jpeg', 'jpg', 'webp'], 'max:2048')],
       "birth_date" => ['required', Rule::date()->beforeOrEqual(today()->subYear())],
-      "bibliography" => ['required'],
+      "biography" => ['required'],
       'cep' => ['required', 'size:8']
     ]);
     $cep = $request->cep;
@@ -107,7 +107,7 @@ class RegisteredUserController extends Controller
   public function index()
   {
     $authUser = Auth::user();
-    $user = $authUser->only(["name", "email", "picture", "birth_date", "bibliography", "cep_id", "address_complement", "address_number"]);
+    $user = $authUser->only(["name", "email", "picture", "birth_date", "biography", "cep_id", "address_complement", "address_number"]);
     $databaseCep = Cep::with(['street:id,name', 'neighborhood:id,name', 'city:id,name', 'state:id,name'])
       ->where('id', $user['cep_id'])
       ->first();
@@ -142,7 +142,7 @@ class RegisteredUserController extends Controller
       "password" => $user->password,
       "picture" => $user->picture ?? '',
       "birth_date" => $user->birth_date,
-      "bibliography" => $user->bibliography,
+      "biography" => $user->biography,
       "cep" => $user->cep ?? '',
       "address_complement" => $user->address_complement ?? '',
       "address_number" => $user->address_number ?? ''
@@ -157,7 +157,7 @@ class RegisteredUserController extends Controller
       "name" => ['required', 'min:3'],
       "picture" => ['file', File::types(['png', 'jpeg', 'jpg', 'webp'], 'max:2048')],
       "birth_date" => ['required', Rule::date()->beforeOrEqual(today()->subYear())],
-      "bibliography" => ['required'],
+      "biography" => ['required'],
       'cep' => ['required', 'size:8']
     ]);
 

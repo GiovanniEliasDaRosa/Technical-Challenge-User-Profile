@@ -13,7 +13,7 @@
       <p class="auth_view_profile_photo"><strong>Foto:</strong> <img src="{{ $picture }}" alt="Foto de perfil"></p>
       <p><strong>Data de nascimento:</strong> {{ $birth_date }}</p>
       <p><strong>Bibliografia:</strong>
-        <pre>{{ $bibliography }}</pre>
+        <pre>{{ $biography }}</pre>
       </p>
     </div>
 

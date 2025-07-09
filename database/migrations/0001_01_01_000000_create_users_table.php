@@ -21,7 +21,7 @@ return new class extends Migration
       $table->string('password');
       $table->string('picture')->nullable();
       $table->date('birth_date');
-      $table->text('bibliography');
+      $table->text('biography');
 
       // Address related information
       $table->foreignIdFor(Cep::class);
